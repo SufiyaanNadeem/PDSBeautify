@@ -5,7 +5,8 @@
     "permissions": [
         "activeTab",
         "declarativeContent",
-        "storage"
+        "storage",
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
     ],
     "background": {
         "scripts": [
@@ -13,6 +14,19 @@
         ],
         "persistent": false
     },
+    "content_scripts": [
+        {
+            //Set your address you want the extension will work in mataches!!! 
+            "matches": [
+                "http://fed.pdsb.org/*",
+                "https://fed.pdsb.org/*"
+            ],
+            "js": [
+                "popup.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
     "page_action": {
         "default_popup": "popup.html",
         "default_icon": {

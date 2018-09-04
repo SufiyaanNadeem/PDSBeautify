@@ -3,14 +3,14 @@
 // found in the LICENSE file.
 
 'use strict';
-
+/*
 let changeColor = document.getElementById('changeColor');
 chrome.storage.sync.get('color', function (data) {
   changeColor.style.backgroundColor = data.color;
   changeColor.setAttribute('value', data.color);
 });
 
-changeColor.onclick = function (element) {
+function changeBackground(element) {
   let color = element.target.value;
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     chrome.tabs.executeScript(
@@ -19,4 +19,27 @@ changeColor.onclick = function (element) {
   });
 };
 
+
+
 //background - image: url("http://sufiyaan.ca/Images/my-pic3.jpg");
+window.onload = changeBackground;
+*/
+//Works
+window.onload = function () {
+  console.log("page load!");
+  document.getElementById("branding").style.backgroundImage = "url('http://sufiyaan.ca/Images/career_parallax.jpg');";
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.executeScript(
+      tabs[0].id,
+      { code: 'document.getElementById("branding").style.backgroundImage = "url(' + 'http://sufiyaan.ca/Images/career_parallax.jpg' + ')";' });
+  });
+  chrome.runtime.onMessage.addListener(
+    function (message, callback) {
+
+      chrome.tabs.executeScript({
+        code: 'document.getElementById("branding").style.backgroundImage = "url(' + 'http://sufiyaan.ca/Images/career_parallax.jpg' + ')";'
+      });
+
+
+    });
+};
