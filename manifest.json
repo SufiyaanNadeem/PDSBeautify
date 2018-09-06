@@ -1,7 +1,7 @@
 {
-    "name": "Getting Started Example",
+    "name": "PDSBetter",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "Change you PDSB Login Wallpaper!",
     "permissions": [
         "activeTab",
         "declarativeContent",
