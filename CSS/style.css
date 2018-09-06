@@ -1,0 +1,26 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    width:100%;
+    align:center;
+    margin:0 auto;
+    padding:10px;
+}
+button {
+
+    outline: none;
+}
+
+h1{
+    font-size:20px;
+    color:#0066cc;
+}
+
+#submit{
+    background-color: #5bb43c;
+    border: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}

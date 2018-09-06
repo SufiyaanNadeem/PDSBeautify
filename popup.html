@@ -2,30 +2,23 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Welcome to Sufiyaan's Chrome Extension</h1>
-    <ol>
-        <form action="/action_page.php">
-            <input type="file" name="pic" accept="image/*">
-            <input type="submit">
-        </form>
+    <img src="images/popup_logo.png" alt="" height="100%">
+    <br/>
+    <br/>
+    <form>
+        <!--<input type="file" name="pic" accept="image/*">-->
+        <input type="text" name="external_url" id="external_url" value="" placeholder="">
+        <br/>
+        <input type="submit" id="submit">
+    </form>
 
-
-        <fieldset>
-            <ol>
-                <li>
-                    <label for="external_url">Or enter URL of your image:</label>
-                    <input title="Or enter URL of location to convert this image to JPG" type="text" name="external_url" id="external_url" value="">
-                    <span class="small_grey">(e.g.&nbsp;https://cdn.online-convert.com/example-file/raster%20image/png/example_small.png)</span>
-                </li>
-            </ol>
-        </fieldset>
-        <button id="changeColor"></button>
-        <script src="popup.js"></script>
+    <script src="popup.js"></script>
 </body>
 
 </html>
