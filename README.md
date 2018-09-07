@@ -1,2 +1,2 @@
 # PDSBetter
-Chrome Extension that changes PDSB login background with users' desired image.
+Chrome Extension that changes Peel District School Board login background with users' desired image.

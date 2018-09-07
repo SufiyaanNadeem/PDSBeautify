@@ -1,64 +1,31 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-'use strict';
+console.log("Your PDSB login is now Better!");
 /*
-let changeColor = document.getElementById('changeColor');
-chrome.storage.sync.get('color', function (data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
+document.getElementById("brandingWrapper").style.backgroundURL = "white";
+document.getElementById("branding").className += "slideInLeft animated";//flipInX
+
+document.getElementById("branding").style.backgroundImage = "url(" + "'http://sufiyaan.ca/Images/career_parallax.jpg'" + ")";
+
+
+*/
+let changeBackground = document.getElementById('submit');//backgroundURL
+
+chrome.storage.sync.get('background', function (data) {//backgroundURL
+  changeBackground.style.backgroundImage = data.background;//backgroundURL
+  changeBackground.setAttribute('name', data.background);//backgroundURL
 });
 
-function changeBackground(element) {
-  let color = element.target.value;
+
+changeBackground.onclick = function (element) {
+  let background = element.target.name;
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     chrome.tabs.executeScript(
       tabs[0].id,
-      { code: 'document.getElementById("branding").style.backgroundImage = "url(' + 'http://sufiyaan.ca/Images/career_parallax.jpg' + ')";' });
+      { code: 'document.getElementById("branding").style.backgroundImage = "url(' + background + ')";document.getElementById("branding").className += "slideInLeft animated";' });
   });
 };
 
 
 
-//background - image: url("http://sufiyaan.ca/Images/my-pic3.jpg");
-window.onload = changeBackground;
-*/
-//Works
-/*window.onload = function () {
-  console.log("page load!");
-  document.getElementById("branding").style.backgroundImage = "url('http://sufiyaan.ca/Images/career_parallax.jpg');";
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    chrome.tabs.executeScript(
-      tabs[0].id,
-      { code: 'document.getElementById("branding").style.backgroundImage = "url(' + 'http://sufiyaan.ca/Images/career_parallax.jpg' + ')";' });
-  });
-  chrome.runtime.onMessage.addListener(
-    function (message, callback) {
-
-      chrome.tabs.executeScript({
-        code: 'document.getElementById("branding").style.backgroundImage = "url(' + 'http://sufiyaan.ca/Images/career_parallax.jpg' + ')";'
-      });
-
-
-    });
-};*/
-
-/*
-function changeBackground(element) {
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    chrome.tabs.executeScript(
-      tabs[0].id,
-      { code: 'document.getElementById("branding").style.backgroundImage = "url(' + 'http://sufiyaan.ca/Images/career_parallax.jpg' + ')";' });
-  });
-};
 
 
 
-//background - image: url("http://sufiyaan.ca/Images/my-pic3.jpg");
-window.onload = changeBackground;*/
-
-console.log("Your PDSB login is now Better!");
-document.getElementById("brandingWrapper").style.backgroundColor = "white";
-document.getElementById("branding").className += "slideInLeft animated";
-document.getElementById("branding").style.backgroundImage = "url(" + "'http://sufiyaan.ca/Images/career_parallax.jpg'" + ")";
