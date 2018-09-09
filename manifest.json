@@ -1,8 +1,8 @@
 {
     "name": "PDSBetter",
     "short_name": "PDSBetter",
-    "version": "0.0.0.1",
-    "description": "Change you PDSB Login Wallpaper!",
+    "version": "0.0.0.3",
+    "description": "Change your PDSB Login Wallpaper!",
     "permissions": [
         "https://www.google-analytics.com/",
         "activeTab",
@@ -45,10 +45,6 @@
         "32": "Images/pdsbetter_32.png",
         "48": "Images/pdsbetter_48.png",
         "128": "Images/pdsbetter_128.png"
-    },
-    "options_ui": {
-        "page": "options.html",
-        "open_in_tab": false
     },
     "manifest_version": 2
 }
