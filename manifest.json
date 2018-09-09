@@ -1,5 +1,6 @@
 {
     "name": "PDSBetter",
+    "short_name": "PDSBetter",
     "version": "0.0.0.1",
     "description": "Change you PDSB Login Wallpaper!",
     "permissions": [
@@ -16,9 +17,7 @@
     },
     "content_scripts": [
         {
-            //Set your address you want the extension will work in mataches!!! 
             "matches": [
-                "http://fed.pdsb.org/*",
                 "https://fed.pdsb.org/*"
             ],
             "js": [
@@ -33,17 +32,17 @@
     "page_action": {
         "default_popup": "popup.html",
         "default_icon": {
-            "16": "Images/get_started16.png",
-            "32": "Images/get_started32.png",
-            "48": "Images/get_started48.png",
-            "128": "Images/get_started128.png"
+            "16": "Images/pdsbetter_16.png",
+            "32": "Images/pdsbetter_32.png",
+            "48": "Images/pdsbetter_48.png",
+            "128": "Images/pdsbetter_128.png"
         }
     },
     "icons": {
-        "16": "Images/get_started16.png",
-        "32": "Images/get_started32.png",
-        "48": "Images/get_started48.png",
-        "128": "Images/get_started128.png"
+        "16": "Images/pdsbetter_16.png",
+        "32": "Images/pdsbetter_32.png",
+        "48": "Images/pdsbetter_48.png",
+        "128": "Images/pdsbetter_128.png"
     },
     "options_ui": {
         "page": "options.html",
