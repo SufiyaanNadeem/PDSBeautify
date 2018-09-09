@@ -1,13 +1,10 @@
-/*chrome.storage.sync.get('background', function (data) {//backgroundURL
-    changeBackground.style.backgroundImage = data.background;//backgroundURL
-    changeBackground.setAttribute('name', data.background);//backgroundURL
-});
-*/
+//On PDSB Page
+let backgroundURL = document.getElementById("branding");
+let backgroundWrapper = document.getElementById("brandingWrapper");
 
-//document.getElementById("branding").style.backgroundImage = "url(" + "'http://sufiyaan.ca/Images/logic_parallax.jpeg'" + ")";
-
-backgroundImage = document.getElementById("branding")
-chrome.storage.sync.get('background', function (data) {//backgroundURL
-    //backgroundImage.className += "slideInLeft animated";//flipInX
-    backgroundImage.style.backgroundImage = "url(" + "'http://sufiyaan.ca/Images/logic_parallax.jpeg'" + ")";//backgroundURL
+chrome.storage.sync.get('background', function (data) {
+    backgroundURL.style.backgroundImage = "url(" + data.background + ")";
+    backgroundURL.className += " slideInLeft animated";
+    backgroundWrapper.style.transition = ".5s";
+    backgroundWrapper.style.backgroundColor = "#000000";
 });

@@ -4,6 +4,7 @@ body{
     margin:0 auto;
     padding:10px;
     text-align:center;
+    height:150px;
 }
 button {
 
@@ -48,4 +49,26 @@ form{
 
 #submit:hover{
     background-color: #0066cc;
+}
+
+.developer{
+    width:110%;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left:-15px;
+    background: linear-gradient(45deg, #b1e1f8 40%, #081126 90%);
+}
+
+.developer a{
+    font-weight: 500;
+    text-decoration: none;
+    font-size:12px;
+    color:black;
+    transition: .6s;
+    top:-10px;
+    color:rgba(255, 255, 255, 0.233);
+}
+.developer a:hover{
+    font-size:13.5px;
+    color:white;
 }

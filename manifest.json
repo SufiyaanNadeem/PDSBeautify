@@ -1,6 +1,6 @@
 {
     "name": "PDSBetter",
-    "version": "1.0",
+    "version": "0.0.0.1",
     "description": "Change you PDSB Login Wallpaper!",
     "permissions": [
         "activeTab",
